@@ -38,7 +38,7 @@ DS.ManyArray = DS.RecordArray.extend({
     var pendingParent = parentRecord && !get(parentRecord, 'id');
     var stateManager = get(this, 'stateManager');
 
-    // Map the array of record objects into an array of  client ids.
+    // Map the array of record objects into an array of client ids.
     added = added.map(function(record) {
       Ember.assert("You can only add records of " + (get(this, 'type') && get(this, 'type').toString()) + " to this association.", !get(this, 'type') || (get(this, 'type') === record.constructor));
 
